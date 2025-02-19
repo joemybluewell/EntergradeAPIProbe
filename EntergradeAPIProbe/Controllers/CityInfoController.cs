@@ -17,7 +17,7 @@ namespace EntergradeAPIProbe.Controllers
         /// Test cases: 1010, 33823, 33930, 34242
         /// </summary>
         /// <param name="zipCode">The zip code to look up.</param>
-        /// <returns>Returns weather information for the given zip code.</returns>
+        /// <returns>The weather information for the given zip code.</returns>
         [HttpGet(Name = "GetCityWeather")]
         public async Task<IActionResult> Get(string zipCode)
         {
@@ -49,17 +49,18 @@ namespace EntergradeAPIProbe.Controllers
 
                     var cityInfo = await httpClient.GetFromJsonAsync<CityData>($"{zipEndpoint}{zipCode}");
 
-                    var weatherData = await httpClient.GetFromJsonAsync<CityData>($"{weatherEndpoint}{cityInfo.CityName}");
+                    if (cityInfo is not null)
+                    {
+                        var weatherData = await httpClient.GetFromJsonAsync<CityData>($"{weatherEndpoint}{cityInfo.CityName}");
 
-                    if (weatherData != null)
-                    {
-                        cityInfo.CurrentWeather = weatherData.CurrentWeather;
-                        return Ok(cityInfo);
+                        if (weatherData is not null)
+                        {
+                            cityInfo.CurrentWeather = weatherData.CurrentWeather;
+                            return Ok(cityInfo);
+                        }
                     }
-                    else
-                    {
-                        return Problem("The remote service is currently unavailable. Please try again later.");
-                    }
+
+                    return Problem("The remote service is currently unavailable. Please try again later.");
                 }
                 else
                 {
@@ -74,4 +75,4 @@ namespace EntergradeAPIProbe.Controllers
             }
         }
     }
-} 
+}
