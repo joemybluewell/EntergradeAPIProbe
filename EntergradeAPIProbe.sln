@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntergradeAPIProbe", "EntergradeAPIProbe\EntergradeAPIProbe.csproj", "{0332B021-0821-4F95-AB42-4874500F41CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{8CD2A797-C696-489B-AA27-AAD0BD716C95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntergradeAPIProbeTests", "EntergradeAPIProbeTests\EntergradeAPIProbeTests.csproj", "{7489970E-4CE8-438D-A711-25F9F1BFE7AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0332B021-0821-4F95-AB42-4874500F41CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0332B021-0821-4F95-AB42-4874500F41CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0332B021-0821-4F95-AB42-4874500F41CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0332B021-0821-4F95-AB42-4874500F41CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7489970E-4CE8-438D-A711-25F9F1BFE7AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7489970E-4CE8-438D-A711-25F9F1BFE7AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7489970E-4CE8-438D-A711-25F9F1BFE7AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7489970E-4CE8-438D-A711-25F9F1BFE7AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7489970E-4CE8-438D-A711-25F9F1BFE7AA} = {8CD2A797-C696-489B-AA27-AAD0BD716C95}
+	EndGlobalSection
+EndGlobal
