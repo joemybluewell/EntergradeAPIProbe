@@ -70,7 +70,7 @@ namespace EntergradeAPIProbe.Controllers
             }
             catch (Exception e)
             {
-                logger.LogError(e.Message + e.StackTrace);
+                logger.LogError($"{e.Message} - {e.StackTrace}");
                 return StatusCode(500, serverErrorMsg);
             }
         }
